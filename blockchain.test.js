@@ -36,7 +36,7 @@ describe('Blockchain', () => {
         describe('when the chain does not start with the genesis block', () =>{
             it('should return false', () =>{
                blockchain.chain[0] = {data: 'hey fake'};
-               expect(Blockchain.isValidChain(blockchain.chain)).toBeFalse();
+               expect(Blockchain.isValidChain(blockchain.chain)).toBe(false);
             });
         });
 
@@ -46,8 +46,8 @@ describe('Blockchain', () => {
                       
 
                         // tamper data
-                        blockchain[2].lastHash = 'yoloSwaggerHacker';
-                        expect(Blockchain.isValidChain(blockchain.chain)).toBeFalse();
+                        blockchain.chain[2].lastHash = 'yoloSwaggerHacker';
+                        expect(Blockchain.isValidChain(blockchain.chain)).toBe(false);
                     });
                 });
         });
@@ -58,7 +58,7 @@ describe('Blockchain', () => {
 
                 // tamper data
                 blockchain.chain[2].data = 'yoloSwaggerHacker';
-                expect(Blockchain.isValidChain(blockchain.chain)).toBeFalse();
+                expect(Blockchain.isValidChain(blockchain.chain)).toBe(false);
 
              });
         });
@@ -67,7 +67,7 @@ describe('Blockchain', () => {
             it('should return true', () =>{
              
 
-                expect(Blockchain.isValidChain(blockchain.chain)).toBeTrue();
+                expect(Blockchain.isValidChain(blockchain.chain)).toBe(true);
             });
         });
 
