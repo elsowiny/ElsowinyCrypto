@@ -1,5 +1,5 @@
-const MINE_RATE = 10000;
-const INITIAL_DIFFICULTY = 14;
+const MINE_RATE = 1000;
+const INITIAL_DIFFICULTY = 5;
 
 
 const GENESIS_DATA = {
