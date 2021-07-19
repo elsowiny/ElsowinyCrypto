@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "Sherief Elsowiny <elsowiny@yahoo.com>",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^27.0.6"
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.12"
   },
   "dependencies": {
     "express": "^4.17.1",
